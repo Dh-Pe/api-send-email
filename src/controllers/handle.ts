@@ -4,9 +4,9 @@ import transporterConfig from "../configs/transporterConfig.ts";
 import targetConfig from "../configs/targetConfig.ts";
 
 export const handle = async (req: Request, res: Response) => {
-  const { temperatura, umidade } = req.body;
+  const { temperatura } = req.body;
   const transporter = nodemailer.createTransport(transporterConfig);
-  const target = targetConfig(temperatura, umidade);
+  const target = targetConfig(temperatura);
 
   transporter
     .sendMail(target)

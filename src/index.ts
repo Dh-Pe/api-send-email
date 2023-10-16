@@ -11,6 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(HashVerify)
 app.post("/", handle);
 
-//app.listen(3000, () => console.log("Server is running..."));
+// app.listen(3000, () => console.log("Server is running..."));
 
 export const handler = serverless(app);

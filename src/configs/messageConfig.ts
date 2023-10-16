@@ -1,4 +1,4 @@
-export default (t: number, u: number) => {
+export default (t: number) => {
   return `
     <!DOCTYPE html>
     <html>
@@ -31,11 +31,6 @@ export default (t: number, u: number) => {
                 font-weight: bold;
                 color: #f00;
             }
-            .umidade {
-                font-size: 24px;
-                font-weight: bold;
-                color: #f00;
-            }
             .notice {
                 font-size: 18px;
                 margin-top: 20px;
@@ -56,7 +51,6 @@ export default (t: number, u: number) => {
         <p>Prezado Gestor,</p>
         <p class="notice">Gostaríamos de informar que a temperatura ou umidade do servidor atingiu níveis preocupantes:</p>
         <p class="temperature">Temperatura Atual: ${t}°C</p>
-        <p class="umidade">Umidade Atual: ${u}%</p>
         <p class="notice">É altamente recomendado tomar medidas imediatas para resfriar o servidor e evitar danos.</p>
         <p class="signature">Atenciosamente,<br>Equipe de Tecnologia</p>
         </div>
